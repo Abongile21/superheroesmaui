@@ -10,6 +10,7 @@ public partial class SuperHeroListPage : ContentPage
 	public SuperHeroListPage()
 	{
 		InitializeComponent();
+		MakeSuperHeroes();
 		SuperHeroesListView.ItemsSource = _superHeroes;
 	}
 
