@@ -9,6 +9,8 @@ namespace Models
     public class SuperHero 
     {
         public bool HasSuperPower { get; set; }
+        
+        public string HeroPhoto { get; set; }
         public string HeroName { get; set; }
         public string AlterEgo { get; set; }
         public string Description { get; set; }
@@ -49,13 +51,14 @@ namespace Models
             return hasSuperPower;
         }*/
 
-        public SuperHero(string superHeroName, string alterEgo, string description,bool hasSuperPower, int powerStrength)
+        public SuperHero(string superHeroName, string alterEgo, string description,bool hasSuperPower, int powerStrength , string heroPhoto)
         {
             PowerStrength = powerStrength;
             HasSuperPower = hasSuperPower;
             HeroName = superHeroName;
             Description = description;
             AlterEgo = alterEgo;
+            HeroPhoto = heroPhoto;
         }
 
 
