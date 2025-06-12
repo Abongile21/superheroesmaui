@@ -65,6 +65,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="SuperHeroInfoPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="SuperHeroListPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

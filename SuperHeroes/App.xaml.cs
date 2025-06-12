@@ -11,7 +11,7 @@ namespace SuperHeroes
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            return new Window(new SuperHeroListPage());
+            return new Window(new NavigationPage(new SuperHeroListPage()));
         }
     }
 }

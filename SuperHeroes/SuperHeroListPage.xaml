@@ -6,9 +6,8 @@
              Title="SuperHeroListPage"
              >
 
-    <VerticalStackLayout>
-        <ListView x:Name="SuperHeroesListView" HasUnevenRows="True" SeparatorVisibility="None" 
->
+    
+        <ListView x:Name="SuperHeroesListView" HasUnevenRows="True" SeparatorVisibility="None" ItemTapped="SuperHeroesListView_ItemTapped">
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="models:SuperHero" >
                         <ViewCell>
@@ -18,10 +17,8 @@
                                 Padding="5">
                                 <Grid.RowDefinitions >
                                     <RowDefinition Height="Auto" />
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                            </Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
 
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
@@ -31,10 +28,8 @@
 
                                 <Image Grid.Column="0" Grid.Row="0" Grid.RowSpan="4"  Source="{Binding HeroPhoto}" Aspect="Fill" HeightRequest="80" WidthRequest="60"
                                        Margin="10" />
-                                <Label Grid.Column="1" Grid.Row="0" FontAttributes="Bold" Text ="{Binding HeroName}" TextColor="Firebrick"/>
-                                <Label Grid.Column="1" Grid.Row="1"  Text="{Binding AlterEgo}"/>
-                                <Label Grid.Column="1" Grid.Row="2"  Text="{Binding HasSuperPower, StringFormat='Has superPower? {0}'}"/>
-                            <Label Grid.Column="1" Grid.Row="3"  Text="{Binding PowerStrength,StringFormat='Power Level: {0}'}"/>
+                                <Label Grid.Column="1" Grid.Row="0" VerticalOptions="Center" FontAttributes="Bold" Text ="{Binding HeroName}" TextColor="Firebrick"/>
+                                
                                 
                         </Grid>
                         </ViewCell>
@@ -42,5 +37,5 @@
             </ListView.ItemTemplate>
 
         </ListView>
-    </VerticalStackLayout>
+    
 </ContentPage>

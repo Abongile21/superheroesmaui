@@ -23,5 +23,12 @@ public partial class SuperHeroListPage : ContentPage
 
         superHero = new SuperHero("Deadpool", "Wade Wilson", "Tech Billionaire", false, 0, "deadpool.jpeg");
         _superHeroes.Add(superHero);
+        superHero = new SuperHero("Cutie", "CM", "Tech Billionaire", true, 0, "");
+        _superHeroes.Add(superHero);
+    }
+
+    private async void SuperHeroesListView_ItemTapped(object sender, ItemTappedEventArgs e)
+    {
+		await Navigation.PushAsync(new SuperHeroInfoPage(e.Item as SuperHero));
     }
 }

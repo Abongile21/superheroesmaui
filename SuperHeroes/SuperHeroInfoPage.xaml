@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SuperHeroes.SuperHeroInfoPage"
+             xmlns:models="clr-namespace:Models"
+             x:DataType="models:SuperHero"
+             Title="{Binding HeroName}">
+    <VerticalStackLayout Padding="10">
+
+            <Border>
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="20" />
+                </Border.StrokeShape>
+
+                    <Image  Source="{Binding HeroPhoto}" Aspect="Fill" HeightRequest="300" WidthRequest="300" Margin="10"/>
+            </Border>
+            <Label  Text="{Binding AlterEgo}"/>
+            <Label  Text="{Binding HasSuperPower, StringFormat='Has superPower? {0}'}"/>
+            <Label  Text="{Binding Description, StringFormat='Status: {0}'}"/>
+            <Label  Text="{Binding PowerStrength,StringFormat='Power Level: {0}'}"/>
+
+        
+    </VerticalStackLayout>
+</ContentPage>
